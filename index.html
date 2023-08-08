@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Eshop</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+           <div class="col-xs-12 col-xxl-5">
+                <div class="goods_box" id="goods">
+                   <div class="menu">
+                    <input type="text" placeholder="Search" class="search">
+                    <button class="add btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">&#10010;</button>
+                   </div> 
+                   <div class="table-responsive">
+                    <table class="goods table mt-3" id="table1">
+                        <thead>
+                            <tr class="table-primary align-middle">
+                                <th data-type="number">№</th>
+                                <th data-type="string">Name</th>
+                                <th data-type="number">Price, &#8364;</th>
+                                <th data-type="number">Amount</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+           </div> 
+           <div class="col-xs-12 col-xxl-7">
+            <div class="price_box">
+                <div class="menu">
+                    <div class="price_title">Total: <span class="price_result">0 &#8364;</span>
+                    </div>
+                 </div>    
+                <div class="table-responsive">
+                    <table class="price table mt-3" id="table2">
+                        <thead>
+                            <tr class="table-primary align-middle">
+                                <th data-type="number">№</th>
+                                <th data-type="string">Name</th>
+                                <th data-type="number">Price/p, &#8364;</th>
+                                <th data-type="number">Amount</th>
+                                <th>Discount, %</th>
+                                <th data-type="number">Price, &#8364;</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="cart">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+           </div> 
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Add product</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label for="good_name" class="form-label">Name product</label>
+              <input type="text" class="form-control mb-3" id="good_name" maxlength="40">
+              <label for="good_price" class="form-label">Price</label>
+              <input type="text" class="form-control mb-3" id="good_price">
+              <label for="good_count" class="form-label">Amount</label>
+              <input type="text" class="form-control mb-3" id="good_count" min="1" value="1">
+              <button type="submit" class="add_new btn btn-success">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/list.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
